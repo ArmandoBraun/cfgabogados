@@ -268,11 +268,11 @@
 
       <div class="col-md-6">
       	<p class="text-muted">Dejanos un mensaje con tu información de contacto y nos comunicaremos con vos a la brevedad.</p>
-        <form name="sentMessage" novalidate="novalidate" action="https://api.staticforms.xyz/submit" method="post">
+        <form name="sentMessage" novalidate="novalidate" action="https://formcarry.com/s/5OB3zr8ov" method="POST" accept-charset="UTF-8">
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2">
               <label>Nombre</label>
-                <input class="form-control" type="text" placeholder="Nombre" name="name">
+                <input class="form-control" type="text" placeholder="Nombre" name="FirstName">
                   <p class="help-block text-danger"></p>
             </div>
           </div>
@@ -296,10 +296,7 @@
               <textarea class="form-control" name="message" rows="5" placeholder="Mensaje a enviar" ></textarea>
             </div>
           </div>
-          <input type="text" name="honeypot" style="display:none">
-	        <input type="hidden" name="accessKey" value="7dc97081-22ec-45a6-be43-07212b421e86">
-	        <input type="hidden" name="subject" value="Contact us from - cfgabogados.com.ar" />
-	        <input type="hidden" name="replyTo" value="mgrondona@cfgabogados.com.ar">
+          <input type="hidden" name="_gotcha">
           <br>
           <div id="success"></div>
           <div class="form-group"><button class="btn btn-primary btn-xl btn-cfg" id="sendMessageButton" type="submit" value="Submit">Enviar</button>
