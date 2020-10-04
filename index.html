@@ -26,8 +26,10 @@
     <title>Caride Fitte & Grondona Abogados</title>
 
 
+
     <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
 
     <style>
       .bd-placeholder-img {
@@ -49,6 +51,8 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
+
+    
   </head>
   <body>
   	<div class="container">
@@ -70,6 +74,13 @@
           <a class="p-2 text-language" href="#">English Version</a>
         </nav>
       </div>
+    </div>
+
+    <div id="messages" class="hide" role="alert">
+    	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    		<span aria-hidden="true">&times;</span>
+    	</button>
+    	<div id="messages_content"></div>
     </div>
 
       <div class="jumbotron cfg-intro">
@@ -267,7 +278,7 @@
 
       <div class="col-md-6">
       	<p class="text-muted">Dejanos un mensaje con tu información de contacto y nos comunicaremos con vos a la brevedad.</p>
-        <form name="sentMessage" novalidate="novalidate" action="https://formcarry.com/s/5OB3zr8ov" method="POST" accept-charset="UTF-8">
+        <form name="sentMessage" id="form" novalidate="novalidate"  action="https://formcarry.com/s/5OB3zr8ov" method="POST" accept-charset="UTF-8">
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2">
               <label>Nombre</label>
@@ -285,7 +296,7 @@
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2">
               <label>Teléfono de Contacto</label>
-              <input class="form-control" type="tel" placeholder="###.###.####" name="phone">
+              <input class="form-control" type="tel" placeholder="" name="phone">
               <p class="help-block text-danger"></p>
             </div>
           </div>
@@ -322,6 +333,22 @@
 </footer>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+            $('#form').submit(function(e) {
+                $('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
+                $('#messages_content').html('<h4>Mensaje enviado con exito.</h4>');
+                $('#modal').modal('show');
+                e.preventDefault();
+            });
+        </script>
+<script>
+	$(document).ready(function() {
+    $(document).on('submit', '#my-form', function() {
+      // do your things
+      return false;
+     });
+});
+</script>
 </html>

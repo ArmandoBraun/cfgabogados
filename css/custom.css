@@ -105,6 +105,18 @@ color: white;
   width: 100%;  /* The width is the width of the web page */
  }
 
+ #messages {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#messages_content {
+  font-family: sans-serif;
+  
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
