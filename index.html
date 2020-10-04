@@ -345,11 +345,11 @@
 			            data: $(this).serialize(),
 			            success: function(response){
 			                if(response.status == "success"){
-			                    ('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
-		    									('#messages_content').html('<h4>Mensaje enviado con exito.</h4>');
-		    									('#modal').modal('show');
+			                    $('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
+		    									$('#messages_content').html('<h4>Mensaje enviado con exito.</h4>');
+		    									$('#modal').modal('show');
 			                }else{
-			                    alert("An error occured: " + response.message);
+			                    alert("Hubo un prolema con el envio de tu mensaje: " + response.message);
 			                }
 			            }
 			        });
