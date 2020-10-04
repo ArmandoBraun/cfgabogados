@@ -332,18 +332,16 @@
     </nav>
   </div>
 </footer>
-</body>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			$('#form').submit(function(e) {
+				$('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
+		    $('#messages_content').html('<h4>Mensaje enviado con exito.</h4>');
+		    $('#modal').modal('show');
+		   	e.preventDefault();
+		  });
+		</script>
+		<script src="js/bootstrap.min.js"></script>
 
-
-
-<script>
-	$('#form').submit(function(e) {
-		$('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
-    $('#messages_content').html('<h4>Mensaje enviado con exito.</h4>');
-    $('#modal').modal('show');
-   	e.preventDefault();
-  });
-</script>
-<script src="js/bootstrap.min.js"></script>
+</body>
 </html>
