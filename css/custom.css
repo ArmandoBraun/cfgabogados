@@ -30,6 +30,11 @@ color: white;
   color: white!important;
 }
 
+ul.area-description {
+  color: #666666;
+  font-size: .9em;
+}
+
 .nosotros img {
   width: 65%;
   border-radius: 150px;
@@ -187,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
  * Blog posts
  */
 .blog-post {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .blog-post-title {
   margin-bottom: 1rem;
